@@ -1,4 +1,5 @@
-﻿using AgendaApi.Models;
+﻿using AgendaApi.Adapter;
+using AgendaApi.Models;
 using AgendaApi.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace AgendaApi.Controller
     public class ControllerAgenda : ControllerBase
     {
         private readonly IRepositoryAgenda _agenda;
+        private ServiceWeather service = new ServiceWeather();
         public ControllerAgenda(IRepositoryAgenda agenda)
         {
             _agenda = agenda;
@@ -69,6 +71,19 @@ namespace AgendaApi.Controller
                 return NotFound();
             }
             return Ok(eventoRemovido);
+        }
+
+        [HttpGet]
+        [Route("Tempo/{city}")]
+        public async Task<ActionResult> GetWeather(string city)
+        {
+            var weather = await service.GetWeather(city);
+
+            if (weather == null)
+            {
+                return NotFound();
+            }
+            return Ok(weather);
         }
     }
 }

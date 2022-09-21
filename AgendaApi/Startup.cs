@@ -1,3 +1,4 @@
+using AgendaApi.Adapter;
 using AgendaApi.Data;
 using AgendaApi.Repository;
 using Microsoft.AspNetCore.Builder;
