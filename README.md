@@ -9,7 +9,7 @@ Com esse propósito, foi desenvolvido uma API de agenda que permiti o usuário c
 - A aplicação deve buscar um evento
 - A aplicação deve exibir a lista de eventos 
 - A aplicação deve adicionar um evento 
-- A aplicação deve alterar um vento 
+- A aplicação deve alterar um evento 
 - A aplicação deve remover um evento
 
 ## Requisitos não funcionais
