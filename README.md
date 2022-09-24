@@ -43,11 +43,10 @@ Com esse propósito, foi desenvolvido uma API de agenda que permiti o usuário c
 
 
 
-## HGBrasil API
+## OpenWeatherMap
 
-O HG Weather é uma API que fornece dados de previsão do tempo e condições climáticas atuais para uma cidade. A documentação da API está disponível em:
+[OpenWeatherMap](https://openweathermap.org/api) é a API utilizada para fornecer os dados meteorológicos globais, incluindo dados meteorológicos atuais e previsões, para a agenda.
 
-https://console.hgbrasil.com/documentation/weather
 ## Stack utilizada
 
 **Back-end:** C#, .Net

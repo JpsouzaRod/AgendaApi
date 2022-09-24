@@ -1,4 +1,5 @@
 using AgendaApi.Adapter;
+using AgendaApi.Adapter.OpenWeatherMap;
 using AgendaApi.Models;
 using AgendaApi.Repository;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace AgendaApi.Usecase
     public class UsecaseEvento : IUsecaseEvento
     {
         private readonly IRepositoryAgenda _agenda;
-        private ServiceWeather service = new ServiceWeather();
+        private WeatherMapAPI service = new WeatherMapAPI();
         public IEnumerable<Forecast> _previsaoTempo { get; private set; }
 
 
@@ -33,8 +34,9 @@ namespace AgendaApi.Usecase
 
         private IEnumerable<Forecast> GetWeather()
         {
-            var weatherResponse = service.GetWeather().Result;
-            return weatherResponse.Forecast;
+            /*var weatherResponse = service.GetWeather().Result;
+            return weatherResponse.Forecast;*/
+            throw new System.NotImplementedException("teste");
         }
     }
 }

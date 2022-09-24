@@ -136,3 +136,9 @@ C:\Users\Jpsouza.rod\AgendaApi\AgendaApi\obj\Debug\net5.0\AgendaApi.RazorTargetA
 C:\Users\Jpsouza.rod\AgendaApi\AgendaApi\obj\Debug\net5.0\AgendaApi.csproj.CopyComplete
 C:\Users\Jpsouza.rod\AgendaApi\AgendaApi\obj\Debug\net5.0\AgendaApi.genruntimeconfig.cache
 C:\Users\Jpsouza.rod\AgendaApi\AgendaApi\obj\Debug\net5.0\ref\AgendaApi.dll
+C:\Users\Jpsou\Downloads\AgendaApi\AgendaApi\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Jpsou\Downloads\AgendaApi\AgendaApi\bin\Debug\net5.0\Refit.dll
+C:\Users\Jpsou\Downloads\AgendaApi\AgendaApi\bin\Debug\net5.0\System.Net.Http.Json.dll
+C:\Users\Jpsou\Downloads\AgendaApi\AgendaApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jpsou\Downloads\AgendaApi\AgendaApi\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\Jpsou\Downloads\AgendaApi\AgendaApi\bin\Debug\net5.0\System.Text.Json.dll

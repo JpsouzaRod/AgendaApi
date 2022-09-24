@@ -1,4 +1,4 @@
-﻿using AgendaApi.Adapter;
+﻿using AgendaApi.Adapter.OpenWeatherMap;
 using AgendaApi.Models;
 using AgendaApi.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +13,7 @@ namespace AgendaApi.Controller
     public class ControllerAgenda : ControllerBase
     {
         private readonly IRepositoryAgenda _agenda;
-        private ServiceWeather service = new ServiceWeather();
+        private WeatherMapAPI service = new WeatherMapAPI();
         public ControllerAgenda(IRepositoryAgenda agenda)
         {
             _agenda = agenda;
@@ -74,16 +74,16 @@ namespace AgendaApi.Controller
         }
 
         [HttpGet]
-        [Route("Tempo/{city}")]
-        public async Task<ActionResult> GetWeather(string city)
+        [Route("Tempo")]
+        public async Task<ActionResult> GetWeather()
         {
-            var weather = await service.GetWeather(city);
+            var weather = await service.GetWeather();
 
             if (weather == null)
             {
                 return NotFound();
             }
-            return Ok(weather);
+            return Ok(weather.list);
         }
     }
 }

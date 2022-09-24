@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <Compile Remove="Adapter\IServiceWeather.cs" />
+    <Compile Remove="Adapter\IWeatherMap.cs" />
+    <Compile Remove="Adapter\ServiceWeather.cs" />
+    <Compile Remove="Adapter\WeatherResponse.cs" />
   </ItemGroup>
 
   <ItemGroup>

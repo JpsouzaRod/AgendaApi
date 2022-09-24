@@ -1036,26 +1036,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jpsouza.rod\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Jpsou\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jpsouza.rod\\AgendaApi\\AgendaApi\\AgendaApi.csproj",
+      "projectUniqueName": "C:\\Users\\Jpsou\\Downloads\\AgendaApi\\AgendaApi\\AgendaApi.csproj",
       "projectName": "AgendaApi",
-      "projectPath": "C:\\Users\\Jpsouza.rod\\AgendaApi\\AgendaApi\\AgendaApi.csproj",
-      "packagesPath": "C:\\Users\\Jpsouza.rod\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jpsouza.rod\\AgendaApi\\AgendaApi\\obj\\",
+      "projectPath": "C:\\Users\\Jpsou\\Downloads\\AgendaApi\\AgendaApi\\AgendaApi.csproj",
+      "packagesPath": "C:\\Users\\Jpsou\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jpsou\\Downloads\\AgendaApi\\AgendaApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jpsouza.rod\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Jpsou\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1116,7 +1109,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
