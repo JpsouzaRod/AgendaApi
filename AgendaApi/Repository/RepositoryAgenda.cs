@@ -37,7 +37,8 @@ namespace AgendaApi.Repository
 
         public IEnumerable<Evento> ListarEventos()
         {
-            return _agenda.Find(p => true).ToListAsync().Result;
+            IEnumerable<Evento> lista = _agenda.Find(p => true).ToListAsync().Result;
+            return lista.OrderBy(x => x.DtHoraInicio);
         }
 
         public async Task<bool> RemoverEvento(string id)
