@@ -18,31 +18,6 @@ Com esse propósito, foi desenvolvido uma API de agenda que permiti o usuário c
 - Os dados recebidos pela API Externa devem ser atualizados diariamente.
 - Os eventos devem ser ordenados por data.
 
-
-## Documentação da API
-
-#### Retorna todos os itens
-
-```http
-  GET /api/items
-```
-
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
-
-#### Retorna um item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
-
-
-
 ## OpenWeatherMap
 
 [OpenWeatherMap](https://openweathermap.org/api) é a API utilizada para fornecer os dados meteorológicos globais, incluindo dados meteorológicos atuais e previsões, para a agenda.
