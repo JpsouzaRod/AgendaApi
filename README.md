@@ -12,6 +12,11 @@ Com esse propósito, foi desenvolvido uma API de agenda que permiti o usuário c
 - A aplicação deve alterar um evento 
 - A aplicação deve remover um evento
 
+## Requisitos não funcionais
+
+- A aplicação deve fazer uma unica requisição para obter os dados de previsão do tempo.
+- Os dados recebidos pela API Externa devem ser atualizados diariamente.
+- Os eventos devem ser ordenados por data.
 
 ## Evento
 
@@ -42,11 +47,7 @@ Com esse propósito, foi desenvolvido uma API de agenda que permiti o usuário c
 | `Evento` | `Evento` |Fornece dados sobre o evento agendado |
 | `PrevisaoTempo` | `PrevisaoTempo` | Fornece previsões meterológicas esperadas para o dia e o local do evento  |
 
-## Requisitos não funcionais
 
-- A aplicação deve fazer uma unica requisição para obter os dados de previsão do tempo.
-- Os dados recebidos pela API Externa devem ser atualizados diariamente.
-- Os eventos devem ser ordenados por data.
 
 ## OpenWeatherMap
 
