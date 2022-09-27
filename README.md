@@ -45,7 +45,7 @@ Com esse propósito, foi desenvolvido uma API de agenda que permiti o usuário c
 | Parâmetro   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
 | `Evento` | `Evento` |Fornece dados sobre o evento agendado |
-| `PrevisaoTempo` | `PrevisaoTempo` | Fornece previsões meterológicas esperadas para o dia e o local do evento  |
+| `PrevisaoTempo` | `PrevisaoTempo` | Fornece previsões meterológicas de Belém |
 
 
 
