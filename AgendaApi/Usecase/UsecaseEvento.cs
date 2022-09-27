@@ -11,12 +11,9 @@ namespace AgendaApi.Usecase
     {
         private readonly IRepositoryAgenda _agenda;
         private WeatherMapAPI service = new WeatherMapAPI();
-        public IEnumerable<Forecast> _previsaoTempo { get; private set; }
-
 
         public UsecaseEvento(IRepositoryAgenda agenda)
         {
-            _previsaoTempo = GetWeather();
             _agenda = agenda;
         }
 
@@ -29,13 +26,6 @@ namespace AgendaApi.Usecase
         public Task<IEnumerable<EventoResponse>> ListarEventos()
         {
             var eventos = _agenda.ListarEventos();
-            throw new System.NotImplementedException("teste");
-        }
-
-        private IEnumerable<Forecast> GetWeather()
-        {
-            /*var weatherResponse = service.GetWeather().Result;
-            return weatherResponse.Forecast;*/
             throw new System.NotImplementedException("teste");
         }
     }
