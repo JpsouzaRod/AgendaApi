@@ -1,6 +1,7 @@
 using AgendaApi.Adapter;
 using AgendaApi.Data;
 using AgendaApi.Repository;
+using AgendaApi.Usecase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -31,7 +32,7 @@ namespace AgendaApi
         {
             services.Configure<DatabaseConfig>(Configuration.GetSection(nameof(DatabaseConfig)));
             services.AddSingleton<IDatabaseConfig>(sp => sp.GetRequiredService<IOptions<DatabaseConfig>>().Value);
-
+            services.AddSingleton<IUsecaseEvento, UsecaseEvento>();
             services.AddSingleton<IRepositoryAgenda, RepositoryAgenda>();
 
             services.AddControllers();
@@ -44,13 +45,11 @@ namespace AgendaApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AgendaApi v1"));
-            }
-
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AgendaApi v1"));
+           
+            app.UseRouting();
             app.UseRouting();
 
             app.UseAuthorization();

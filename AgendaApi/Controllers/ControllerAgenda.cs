@@ -1,6 +1,7 @@
 ﻿using AgendaApi.Adapter.OpenWeatherMap;
 using AgendaApi.Models;
 using AgendaApi.Repository;
+using AgendaApi.Usecase;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -13,25 +14,48 @@ namespace AgendaApi.Controller
     public class ControllerAgenda : ControllerBase
     {
         private readonly IRepositoryAgenda _agenda;
-        private WeatherMapAPI service = new WeatherMapAPI();
-        public ControllerAgenda(IRepositoryAgenda agenda)
+        private readonly IUsecaseEvento _evento;
+        public ControllerAgenda(IRepositoryAgenda agenda, IUsecaseEvento evento)
         {
+            _evento = evento;
             _agenda = agenda;
         }
 
-
         [HttpGet]
         [Route("agenda")]
-        public ActionResult<IEnumerable<Evento>> ListarEventos()
+        public ActionResult<IEnumerable<Evento>> ListarEvento()
         {
-            return Ok(_agenda.ListarEventos());
+            var lista = _agenda.ListarEventos();
+            return Ok(lista);
+        }
+
+        [HttpGet]
+        [Route("agenda/previsao")]
+        public ActionResult<IEnumerable<EventoResponse>> ListarEventos()
+        {
+            var lista = _evento.ListarEventos();
+            return Ok(lista);
+        }
+
+        [HttpGet]
+        [Route("agenda/previsao/{id}")]
+        public async Task<ActionResult<EventoResponse>> BuscarPrevisaoEvento(string id)
+        {
+            var evento = _evento.BuscarEvento(id);
+
+            if (evento == null)
+            {
+                return NotFound();
+            }
+            return Ok(evento);
         }
 
         [HttpGet]
         [Route("agenda/{id}")]
-        public async Task<ActionResult<Evento>> BuscarEvento(string id)
+        public async Task<ActionResult<EventoResponse>> BuscarEvento(string id)
         {
             var evento = _agenda.BuscarEvento(id);
+
             if (evento == null)
             {
                 return NotFound();
@@ -71,19 +95,6 @@ namespace AgendaApi.Controller
                 return NotFound();
             }
             return Ok(eventoRemovido);
-        }
-
-        [HttpGet]
-        [Route("Tempo")]
-        public async Task<ActionResult> GetWeather()
-        {
-            var weather = await service.GetWeather();
-
-            if (weather == null)
-            {
-                return NotFound();
-            }
-            return Ok(weather.list);
         }
     }
 }

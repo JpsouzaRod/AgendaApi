@@ -1,18 +1,23 @@
-﻿namespace AgendaApi.Models
+﻿using System;
+using System.Text.Json.Serialization;
+
+namespace AgendaApi.Models
 {
     public class PrevisaoTempo
     {
-        public PrevisaoTempo(double temp_min, double temp_max, string descricao, int precipitacao)
+        public PrevisaoTempo(dynamic obj)
         {
-            Temp_min = temp_min;
-            Temp_max = temp_max;
-            Descricao = descricao;
-            Precipitacao = precipitacao;
+            Date = obj.day;
+            TempMin = obj.temp_min;
+            TempMax = obj.temp_max;
+            Descricao = obj.description;
+            Precipitacao = obj.pop;
         }
 
-        public double Temp_min { get; private set; }
-        public double Temp_max { get; private set; }
+        public DateTime Date { get; private set; }
+        public double TempMin { get; private set; }
+        public double TempMax { get; private set; }
         public string Descricao { get; private set; }
-        public int Precipitacao { get; private set; }
+        public float Precipitacao { get; private set; }
     }
 }

@@ -9,8 +9,8 @@ namespace AgendaApi.Models
         public Evento(string id,
                       string titulo,
                       string local,
-                      DateTime dtHoraInicio,
-                      DateTime dtHoraFim)
+                      string dtHoraInicio,
+                      string dtHoraFim)
         {
             Titulo = titulo;
             Local = local;
@@ -23,7 +23,7 @@ namespace AgendaApi.Models
         public string Id { get; private set; }
         public string Titulo { get; set; }
         public string Local { get; set; }
-        public DateTime DtHoraInicio { get; set; }
-        public DateTime DtHoraFim { get; set; }
+        public string DtHoraInicio { get; set; }
+        public string DtHoraFim { get; set; }
     }
 }

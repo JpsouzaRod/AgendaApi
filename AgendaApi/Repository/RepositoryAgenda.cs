@@ -1,7 +1,9 @@
 ﻿using AgendaApi.Data;
 using AgendaApi.Models;
 using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace AgendaApi.Repository
@@ -38,6 +40,7 @@ namespace AgendaApi.Repository
         public IEnumerable<Evento> ListarEventos()
         {
             IEnumerable<Evento> lista = _agenda.Find(p => true).ToListAsync().Result;
+            lista = lista.Where(x => DateTime.Parse(x.DtHoraInicio) >= DateTime.Now);
             return lista.OrderBy(x => x.DtHoraInicio);
         }
 
